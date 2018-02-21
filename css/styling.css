@@ -1,0 +1,354 @@
+/* CLEARFIX */
+.clearfix::before, .clearfix::after {
+    content: "";
+    display: table;
+    line-height: 0;
+}
+.clearfix::after {
+    clear: both;
+}
+body
+{
+    margin:0 auto;
+    background-color: black;
+}
+body::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #3c3c3d;
+  outline: 1px solid slategrey;
+}
+/*################################################################HEADER###################################################################*/
+header
+{
+background-color: #3c3c3d;
+padding-bottom: 30px;
+opacity: 0.9;
+animation: 0.5s fadeheader ease-in-out;
+animation-fill-mode: forwards;
+}
+@keyframes fadeheader {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0.9;
+    }
+}
+header > a
+{
+    color: white;
+    text-decoration: none;
+}
+header  img
+{
+    opacity: 0;
+    margin-top: 30px;
+    width: 15%;
+    height: auto;
+    margin-left: 42.5%;
+    margin-right: 42.5%;
+    border-radius: 100%;
+    animation: 0.5s fade ease-in-out;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fade {
+    0%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+#h1link, #h2text
+{
+    display: table;
+    margin: 0 auto;
+}
+#h1link h1
+{
+    opacity: 0;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 5px;
+    animation: 0.5s fade ease-in-out;
+    animation-delay: 0.9s;
+    animation-fill-mode: forwards;
+}
+#h2text h2
+{
+    opacity: 0;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    animation: 0.5s fade ease-in-out;
+    animation-delay: 1.3s;
+    animation-fill-mode: forwards;
+}
+#arrow
+{
+    opacity: 0;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: table;
+    margin: 0 auto;
+    padding: 10px;
+    transform: rotate(45deg);
+    animation: 0.2s fade ease-in-out;
+    animation-delay: 1.8s;
+    animation-fill-mode: forwards;
+}
+form{
+    opacity: 0.9;
+    background-color: white;
+    display: table;
+    position: fixed;
+    padding: 50px;
+    border: 1px solid #3c3c3d;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: black;
+    color: white;
+    display: none;
+}
+.show
+{
+    display: block;
+}
+#error
+{
+    color: red;
+}
+form > input
+{
+    width: 100%;
+    border: none;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: #00FF00;
+    border-bottom: 3px solid #3c3c3d;
+    background-color: black;
+    margin-bottom: 20px;
+}
+form > input:focus
+{
+    outline: none;
+}
+form > textarea
+{
+    border: 3px solid #3c3c3d;
+    background-color: black;
+    color: #00FF00;
+    width: 97%;
+}
+form > textarea:focus
+{
+    outline: none;
+}
+form > button
+{
+    width: 100%;
+    background-color: #00FF00;
+    border: none;
+    font-weight: bold;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+form> button:focus
+{
+    outline: none;
+}
+.close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: var(--height);
+  height: var(--height);
+  opacity: 0.3;
+}
+.close {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 33px;
+  width: 2px;
+  background-color: white;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+/* ###########################################################################CMD######################################################################################"" */
+.cmd
+{
+    opacity: 0;
+    margin-top: 20px;
+    font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+    background-color: black;
+    color: #00FF00;
+    font-size: 12pt;
+    animation: 0.5s fade ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+.cmd a
+{
+    color: #00FF00;
+    text-decoration: none;
+}
+.commands
+{
+    border: 1px dashed #00FF00;
+    width: 20%;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+.commands > h3, .commandlist
+{
+    float: left;
+}
+.commands > h3
+{
+    margin-left: 10px;
+}
+.commandlist
+{
+    list-style-type: none;
+}
+.animatetext {
+    white-space: nowrap !important;
+    overflow: hidden;
+    width: 0%;
+    animation: type 5s steps(100, end);
+    animation-delay: 2.1s;
+    animation-fill-mode: forwards;
+}
+.animatetextconf
+{
+    white-space: nowrap !important;
+    overflow: hidden;
+    width: 0%;
+    animation: type 5s steps(100, end);
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+@keyframes type{
+    from { width: 0 }
+      to { width:100% }
+}
+.bottomline > p, #typeline
+{
+    float: left;
+}
+.bottomline > p
+{
+    margin: 0;
+}
+.bottomline
+{
+    display: flex;
+}
+.animatefirstline
+{
+    opacity: 0;
+    animation: 0.5s fade ease-in-out;
+    animation-delay: 4.7s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+#typeline
+{
+    border: none;
+    background-color: black;
+    color: #00FF00;
+    caret-color: auto;
+    flex: 1;
+    font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+    font-size: 12pt;
+}
+#typeline:focus
+{
+    outline: none;
+}
+.lines
+{
+    list-style-type: none;
+
+}
+.lines > li
+{
+    white-space: pre-wrap;
+}
+.project
+{
+    display: inline-block;
+    width: 25%;
+    margin-left: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px dashed #00FF00;
+}
+.project > h3
+{
+    display: table;
+    margin: 0 auto;
+    margin-top: 25px;
+}
+.project > img
+{
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+.project > p
+{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.project > a > img
+{
+    width: 100%;
+}
+
+.project > a
+{
+    float: left;
+    width: 7.5%;
+    margin-bottom: 25px;
+}
+.onlinelink
+{
+    margin-left: 40%;
+}
+.gitlink
+{
+    margin-left: 5%;
+}
