@@ -112,7 +112,6 @@ function WidthChange(mq)
         CheckCommand("projects","mobile");
         CheckCommand("contact","mobile");
     }
-
 }
 function CheckCommand(value,event)
 {
@@ -182,6 +181,7 @@ function CreateNewBottomLine()
     lines.appendChild(newbottomline);
     bottomline=document.getElementsByClassName("bottomline")[0];
     document.getElementById("typeline").focus();
+    window.scrollTo(0,0);
 }
 
 function Clear()
@@ -297,7 +297,6 @@ function Contact(timeout)
 function CreateIntro(theintro)
 {
     var introtext=document.createElement("li");
-    introtext.setAttribute("class","animatetext");
     introtext.appendChild(document.createTextNode(theintro))
     lines.insertBefore(introtext, lines.firstChild);
 }

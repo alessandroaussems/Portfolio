@@ -151,29 +151,6 @@ header  img
 {
     list-style-type: none;
 }
-.animatetext
-{
-    white-space: nowrap !important;
-    overflow: hidden;
-    width: 0%;
-    animation: type 3s steps(100, end);
-    animation-delay: 2.1s;
-    animation-fill-mode: forwards;
-}
-.animatetextconf
-{
-    white-space: nowrap !important;
-    overflow: hidden;
-    width: 0%;
-    animation: type 3s steps(100, end);
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-}
-@keyframes type
-{
-    from { width: 0 }
-      to { width:100% }
-}
 .bottomline > p, #typeline
 {
     float: left;
@@ -278,10 +255,6 @@ header  img
         width: 80%;
         margin-left: 10%;
         margin-right: 10%;
-    }
-    .animatetext
-    {
-        font-size: small;
     }
     .lines
     {

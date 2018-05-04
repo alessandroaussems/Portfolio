@@ -48,7 +48,7 @@
                 </ul>
             </div>
             <ul class="lines">
-                <li class="bottomline clearfix animatefirstline"><p>~</p><input id="typeline" type="text" onblur="this.focus()" onKeyPress="CheckCommand(this.value,event)" onkeypress="(event)" autofocus spellcheck="false"></li>
+                <li class="bottomline clearfix"><p>~</p><input id="typeline" type="text" onblur="this.focus()" onKeyPress="CheckCommand(this.value,event)" onkeypress="(event)" autofocus spellcheck="false"></li>
             </ul>
         </div>
         <script src="js/cli.js"></script>
