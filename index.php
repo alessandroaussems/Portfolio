@@ -38,14 +38,6 @@
             <a href="/" id="h2text"><h2>Webdeveloper</h2></a>
             <p id="arrow"></p>
         </header>
-        <form id="popup">
-            <a class="close" onclick="CloseQuestion()"></a>
-            <h4>You have a question? Ask it here:</h4>
-            <p id="error"></p>
-            <input type="text" name="email" placeholder="E-mail" id="email"><br>
-            <textarea name="message" placeholder="Message" rows="10" id="message"></textarea><br>
-            <button onclick="HandleQuestion()">Ask!</button>
-        </form>
         <div class="cmd">
             <div class="commands clearfix">
                 <h3>Commands ></h3>
@@ -53,12 +45,10 @@
                     <li>projects</li>
                     <li>skills</li>
                     <li>contact</li>
-                    <li>question</li>
                 </ul>
             </div>
             <ul class="lines">
-                <li class="animatetext">Hi welcome to my interactive portfolio. You can type commands to get to know me!</li>
-                <li class="bottomline clearfix animatefirstline"><p>C:/Users/AlessandroAussems></p><input id="typeline" type="text" onblur="this.focus()" onKeyPress="CheckCommand(this.value,event)" onkeypress="(event)" autofocus spellcheck="false"></li>
+                <li class="bottomline clearfix animatefirstline"><p>~</p><input id="typeline" type="text" onblur="this.focus()" onKeyPress="CheckCommand(this.value,event)" onkeypress="(event)" autofocus spellcheck="false"></li>
             </ul>
         </div>
         <script src="js/cli.js"></script>

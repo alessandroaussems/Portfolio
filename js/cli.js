@@ -92,16 +92,45 @@ var projectsdata= [
 var bottomline=document.getElementsByClassName("bottomline")[0];
 var inputfield=document.getElementById('typeline');
 var lines=document.getElementsByClassName("lines")[0];
+if (matchMedia) {
+    const mq = window.matchMedia("(min-width: 650px)");
+    mq.addListener(WidthChange);
+    WidthChange(mq);
+}
+function WidthChange(mq)
+{
+    if (mq.matches)
+    {
+        CheckCommand("clear","mobile");
+        CreateIntro("Hi welcome to my interactive portfolio. You can type commands to get to know me!");
+    }
+    else
+    {
+        CheckCommand("clear","mobile");
+        CreateIntro("Hi welcome to my portfolio!");
+        CheckCommand("skills","mobile");
+        CheckCommand("projects","mobile");
+        CheckCommand("contact","mobile");
+    }
+
+}
 function CheckCommand(value,event)
 {
-    if(event.keyCode==13)
+    if(event.keyCode==13 || event=="mobile")
     {
         value=value.toLowerCase();
         CreateJustTypedLine(value);
         switch(value)
         {
             case "contact":
-                Contact();
+                if(event=="mobile")
+                {
+                    Contact(0);
+                }
+                else
+                {
+                    Contact(750);
+                }
                 bottomline.scrollIntoView(true);
             break;
             case "projects":
@@ -124,10 +153,6 @@ function CheckCommand(value,event)
                 CreateNewBottomLine();
                 bottomline.scrollIntoView(true);
             break;
-            case "question":
-                Question();
-                bottomline.scrollIntoView(true);
-            break;
             default:
                 CommandNotFound();
                 CreateNewBottomLine();
@@ -137,7 +162,7 @@ function CheckCommand(value,event)
 function CreateJustTypedLine(value)
 {
     var newlistitem=document.createElement("li");
-    newlistitem.innerHTML="C:/Users/AlessandroAussems>"+value;
+    newlistitem.innerHTML="~"+value;
     bottomline.parentNode.replaceChild(newlistitem,bottomline);
 }
 function CreateNewBottomLine()
@@ -145,7 +170,7 @@ function CreateNewBottomLine()
     var newbottomline=document.createElement("li");
     newbottomline.setAttribute("class","bottomline clearfix");
     var newtext=document.createElement("p");
-    newtext.innerHTML="C:/Users/AlessandroAussems>";
+    newtext.innerHTML="~";
     var newinputfield=document.createElement("input");
     newinputfield.setAttribute("id","typeline");
     newinputfield.setAttribute("type","text");
@@ -224,7 +249,7 @@ function ShowSkills()
         lines.appendChild(newline);
     }
 }
-function Contact()
+function Contact(timeout)
 {
 
     for(var i=0;i<contactdata.length;i++)
@@ -246,7 +271,17 @@ function Contact()
                 }
                 else
                 {
-                    pretag.appendChild(document.createTextNode(contactdata[i]))
+                    if(i==1)
+                    {
+                        var maillink=document.createElement("a");
+                        maillink.setAttribute("href","mailto:hello@alessandroaussems.be");
+                        maillink.appendChild(document.createTextNode(contactdata[i]));
+                        pretag.appendChild(maillink);
+                    }
+                    else
+                    {
+                        pretag.appendChild(document.createTextNode(contactdata[i]))
+                    }
                 }
                 newline.appendChild(pretag);
                 lines.appendChild(newline);
@@ -255,76 +290,14 @@ function Contact()
                 {
                     CreateNewBottomLine();
                 }
-        }, i * 750);
+        }, i * timeout);
         }(i));
     }
 }
-function Question()
+function CreateIntro(theintro)
 {
-    CreateNewBottomLine();
-    document.getElementById("typeline").removeAttribute("onblur");
-    var popup=document.getElementById("popup");
-    popup.classList.add("show");
-    document.getElementById("email").focus();
-}
-function CloseQuestion()
-{
-    document.getElementById("typeline").setAttribute("onblur","this.focus()");
-    document.getElementById("typeline").focus();
-    var popup=document.getElementById("popup");
-    popup.classList.remove("show");
-}
-function HandleQuestion()
-{
-    event.preventDefault();
-    var email=document.getElementById("email").value;
-    var message=document.getElementById("message").value;
-    if(ValidateEmail(email) && message!="")
-    {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200)
-            {
-                var response = this.responseText;
-                if(response=="SEND")
-                {
-                    CloseQuestion();
-                    lines.lastChild.innerHTML="";
-                    var newline=document.createElement("li");
-                    newline.setAttribute("class","animatetextconf");
-                    newline.appendChild(document.createTextNode("Thank you for your question!"));
-                    lines.appendChild(newline);
-                    CreateNewBottomLine();
-                }
-                else
-                {
-                    document.getElementById("error").innerHTML="Whoops! Something went wrong. Please try again.";
-                }
-            }
-            else
-            {
-                document.getElementById("error").innerHTML="Whoops! Something went wrong. Please try again.";
-            }
-        };
-        $data="email="+email+"&message="+message;
-        xmlhttp.open("POST", "sendemail.php", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-        xmlhttp.send($data);
-    }
-    if(!ValidateEmail(email))
-    {
-        document.getElementById("error").innerHTML="Your email is not correct!";
-    }
-    if(message=="")
-    {
-        document.getElementById("error").innerHTML="Your message cannot be empty";
-    }
-}
-function ValidateEmail(mail)
-{
- if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail))
-  {
-    return (true)
-  }
-    return (false)
+    var introtext=document.createElement("li");
+    introtext.setAttribute("class","animatetext");
+    introtext.appendChild(document.createTextNode(theintro))
+    lines.insertBefore(introtext, lines.firstChild);
 }
