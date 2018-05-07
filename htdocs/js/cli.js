@@ -181,7 +181,10 @@ function CreateNewBottomLine()
     lines.appendChild(newbottomline);
     bottomline=document.getElementsByClassName("bottomline")[0];
     document.getElementById("typeline").focus();
-    window.scrollTo(0,0);
+    if(document.body.clientWidth<650)
+    {
+        window.scrollTo(0,0);
+    }
 }
 
 function Clear()
