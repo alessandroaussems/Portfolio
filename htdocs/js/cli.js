@@ -26,25 +26,18 @@ var contactdata=[
 ];
 var projectsdata= [
     {
+        title:"Karel-Chatbot",
+        exp:"Final year project @ KdG. Chatbot for KdG students!",
+        img:"karelchatbot.jpg",
+        git:"https://github.com/alessandroaussems/karel-chatbot",
+        online:"https://karel-chatbot.be/"
+    },
+    {
         title:"Restaumator",
         exp:"Restaurant automatization. With Arduino",
         img:"restaumator.jpg",
         git:"https://github.com/RobLui/Restaumator",
         online:"http://restaumator.com"
-    },
-    {
-        title:"Codepolice",
-        exp:"Find plagiarism code on the internet!",
-        img:"codepolice.jpg",
-        git:"https://github.com/alessandroaussems/Codepolice",
-        online:"https://codepolice.alessandro.aussems.mtantwerp.eu/"
-    },
-    {
-        title:"Blackjack",
-        exp:"Blackjack with Javascript observables.",
-        img:"KH.jpg",
-        git:"https://github.com/alessandroaussems/Blackjack",
-        online:"https://alessandroaussems.github.io/Blackjack/"
     },
     {
         title:"Tinkle",
@@ -54,11 +47,18 @@ var projectsdata= [
         online:"https://tinkletoilets.com/"
     },
     {
-        title:"As Adventure Contest",
-        exp:"Fictional contest, created in Laravel.",
-        img:"asadventure.jpg",
-        git:"https://github.com/alessandroaussems/AsAdventureContest",
-        online:"https://asadventurecontest.alessandro.aussems.mtantwerp.eu/"
+        title:"Codepolice",
+        exp:"Find plagiarism code on the internet!",
+        img:"codepolice.jpg",
+        git:"https://github.com/alessandroaussems/Codepolice",
+        online:"https://alessandroaussems.be/codepolice/"
+    },
+    {
+        title:"Blackjack",
+        exp:"Blackjack with Javascript observables.",
+        img:"KH.jpg",
+        git:"https://github.com/alessandroaussems/Blackjack",
+        online:"https://alessandroaussems.github.io/Blackjack/"
     },
     {
         title:"The Supermaze",
@@ -72,14 +72,14 @@ var projectsdata= [
         exp:"Created with pure PHP, no framework!",
         img:"hackernews.jpg",
         git:"https://github.com/alessandroaussems/Hackernews",
-        online:"https://hackernews.alessandro.aussems.mtantwerp.eu/"
+        online:"https://alessandroaussems.be/hackernews/"
     },
     {
         title:"HanGit",
         exp:"Javascript game based on the well known Hangman",
         img:"hangit.jpg",
         git:"https://github.com/alessandroaussems/HangIt",
-        online:"https://hangit.alessandro.aussems.mtantwerp.eu/"
+        online:"https://alessandroaussems.be/hangit/"
     },
     {
         title:"The Case: Teaser",
@@ -87,7 +87,7 @@ var projectsdata= [
         img:"thecase.jpg",
         git:"none",
         online:"https://www.youtube.com/embed/xQ6TH2SYqss"
-    },
+    }
 ];
 var bottomline=document.getElementsByClassName("bottomline")[0];
 var inputfield=document.getElementById('typeline');
