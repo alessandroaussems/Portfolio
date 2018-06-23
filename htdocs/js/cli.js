@@ -19,10 +19,11 @@ var skillsdata=[
             ];
 var contactdata=[
                 "Pinging alessandroaussems.be",
-                "Reply Email   : hello@alessandroaussems.be",
-                "Reply Tel     : +32 (0)471 44 82 10",
-                "Reply Location: Lier",
-                "Reply Github  : github.com/alessandroaussems",
+                "Reply Email     : hello@alessandroaussems.be",
+                "Reply Tel       : +32 (0)471 44 82 10",
+                "Reply Location  : Lier",
+                "Reply Github    : github.com/alessandroaussems",
+                "Reply LinkedIn  : linkedin.com/in/alessandroaussems"
 ];
 var projectsdata= [
     {
@@ -264,6 +265,20 @@ function Contact(timeout)
                 window.setTimeout(function(){
                 var newline=document.createElement("li");
                 var pretag=document.createElement("pre");
+                if(i==1)
+                {
+                    var maillink=document.createElement("a");
+                    maillink.setAttribute("href","mailto:hello@alessandroaussems.be");
+                    maillink.appendChild(document.createTextNode(contactdata[i]));
+                    pretag.appendChild(maillink);
+                }
+                if(i==2)
+                {
+                    var tellink=document.createElement("a");
+                    tellink.setAttribute("href","tel:+32471448210");
+                    tellink.appendChild(document.createTextNode(contactdata[i]));
+                    pretag.appendChild(tellink);
+                }
                 if(i==4)
                 {
                     var link=document.createElement("a");
@@ -272,19 +287,17 @@ function Contact(timeout)
                     link.appendChild(document.createTextNode(contactdata[i]));
                     pretag.appendChild(link);
                 }
-                else
+                if(i==5)
                 {
-                    if(i==1)
-                    {
-                        var maillink=document.createElement("a");
-                        maillink.setAttribute("href","mailto:hello@alessandroaussems.be");
-                        maillink.appendChild(document.createTextNode(contactdata[i]));
-                        pretag.appendChild(maillink);
-                    }
-                    else
-                    {
-                        pretag.appendChild(document.createTextNode(contactdata[i]))
-                    }
+                    var link=document.createElement("a");
+                    link.setAttribute("href","https://linkedin.com/in/alessandroaussems");
+                    link.setAttribute("target","_blank");
+                    link.appendChild(document.createTextNode(contactdata[i]));
+                    pretag.appendChild(link);
+                }
+                if(i!=1 && i!=2 && i!=4 && i!=5)
+                {
+                    pretag.appendChild(document.createTextNode(contactdata[i]))
                 }
                 newline.appendChild(pretag);
                 lines.appendChild(newline);
