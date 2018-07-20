@@ -35,7 +35,7 @@
         <header>
             <img src="assets/alessandro.jpg" alt="Een foto van Alessandro Ausssems">
             <a href="/" id="h1link"><h1>Alessandro Aussems</h1></a>
-            <a href="/" id="h2text"><h2>Webdeveloper</h2></a>
+            <a href="/" id="h2text"><h2>Developer</h2></a>
             <p id="arrow"></p>
         </header>
         <div class="cmd">

@@ -30,7 +30,7 @@ body::-webkit-scrollbar-thumb
 /*################################################################HEADER###################################################################*/
 header
 {
-background-color: #3c3c3d;
+background-color: #070707;
 padding-bottom: 30px;
 opacity: 0.9;
 animation: 0.5s fadeheader ease-in-out;
