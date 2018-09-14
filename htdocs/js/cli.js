@@ -19,7 +19,7 @@ var skillsdata=[
             ];
 var contactdata=[
                 "Pinging alessandroaussems.be",
-                "Reply Email     : hello@alessandroaussems.be",
+                "Reply Email     : me@alessandroaussems.be",
                 "Reply Tel       : +32 (0)471 44 82 10",
                 "Reply Location  : Lier",
                 "Reply Github    : github.com/alessandroaussems",
@@ -30,7 +30,7 @@ var projectsdata= [
         title:"Karel-Chatbot",
         exp:"Final year project @ KdG. Chatbot for KdG students!",
         img:"karelchatbot.jpg",
-        git:"https://github.com/alessandroaussems/karel-chatbot",
+        git:"none",
         online:"https://karel-chatbot.be/"
     },
     {
