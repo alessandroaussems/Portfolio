@@ -1,21 +1,21 @@
 var skillsdata=[
-                "HTML          : ##########################################",
-                "CSS           : ###############################",
-                "Markdown      : #####################################",
-                "Javascript    : ##################################################",
-                "PHP           : ###########################################",
-                "Laravel       : #############################",
-                "C             : #################",
-                "C++           : #############",
-                "C#            : #####################",
-                "Python        : ###############",
-                "Java          : ###################",
-                "Angular 2     : ############################",
-                "Wordpress     : #################################",
-                "Drupal        : ####",
-                "Photoshop     : ###############################",
-                "Première      : ########################################",
-                "After Effects : #############################",
+                "[HTML]",
+                "[CSS]",
+                "[SCSS]",
+                "[Markdown]",
+                "[Javascript]",
+                "[JQuery]",
+                "[PHP]",
+                "[Laravel]",
+                "[C]",
+                "[C++]",
+                "[C#]",
+                "[Python]",
+                "[Java]",
+                "[Angular]",
+                "[Vue]",
+                "[Wordpress]",
+                "[Drupal]",
             ];
 var contactdata=[
                 "Pinging alessandroaussems.be",
@@ -125,11 +125,11 @@ function CheckCommand(value,event)
             case "contact":
                 if(event=="mobile")
                 {
-                    Contact(0);
+                    Contact(0,"noreply");
                 }
                 else
                 {
-                    Contact(750);
+                    Contact(750,"reply");
                 }
                 bottomline.scrollIntoView(true);
             break;
@@ -244,16 +244,19 @@ function ShowProjects()
 }
 function ShowSkills()
 {
+    var line=document.createElement('li');
     for(var i=0;i<skillsdata.length;i++)
     {
-        var newline=document.createElement("li");
-        var pretag=document.createElement("pre");
-        pretag.appendChild(document.createTextNode(skillsdata[i]))
-        newline.appendChild(pretag);
-        lines.appendChild(newline);
+        var span=document.createElement("span");
+        span.appendChild(document.createTextNode(skillsdata[i]));
+        span.setAttribute("class","skill");
+        line.appendChild(span);
+        var wbr=document.createElement("wbr");
+        line.appendChild(wbr);
     }
+    lines.appendChild(line);
 }
-function Contact(timeout)
+function Contact(timeout,reply)
 {
 
     for(var i=0;i<contactdata.length;i++)
@@ -261,7 +264,10 @@ function Contact(timeout)
         // create a closure to preserve the value of "i"
         (function(i)
         {
-
+                if(reply=="noreply")
+                {
+                    contactdata[i]=contactdata[i].substring(contactdata[i].indexOf(":") + 1);
+                }
                 window.setTimeout(function(){
                 var newline=document.createElement("li");
                 var pretag=document.createElement("pre");
@@ -297,7 +303,14 @@ function Contact(timeout)
                 }
                 if(i!=1 && i!=2 && i!=4 && i!=5)
                 {
-                    pretag.appendChild(document.createTextNode(contactdata[i]))
+                    if(timeout==0 && i==0)
+                    {
+
+                    }
+                    else
+                    {
+                        pretag.appendChild(document.createTextNode(contactdata[i]))
+                    }
                 }
                 newline.appendChild(pretag);
                 lines.appendChild(newline);

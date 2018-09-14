@@ -242,6 +242,11 @@ header  img
 {
     margin-left: 5%;
 }
+.skill
+{
+    margin-right: 1%;
+    white-space: nowrap;
+}
 @media only screen and (max-width: 650px)
 {
     header img
