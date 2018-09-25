@@ -31,21 +31,21 @@ var projectsdata= [
         exp:"Final year project @ KdG. Chatbot for KdG students!",
         img:"karelchatbot.jpg",
         git:"none",
-        online:"https://karel-chatbot.be/"
+        online:"https://www.youtube.com/embed/P847xWRseTU"
     },
     {
         title:"Restaumator",
         exp:"Restaurant automatization. With Arduino",
         img:"restaumator.jpg",
         git:"https://github.com/RobLui/Restaumator",
-        online:"http://restaumator.com"
+        online:"https://www.youtube.com/embed/mxV8K7mM3-0"
     },
     {
         title:"Tinkle",
         exp:"A toilet any place, any time. AirBnB for toilets!",
         img:"tinkle.jpg",
         git:"https://github.com/alessandroaussems/Tinkle",
-        online:"https://tinkletoilets.com/"
+        online:"https://github.com/alessandroaussems/Tinkle"
     },
     {
         title:"Codepolice",
