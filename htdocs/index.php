@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
     <head>
         <meta charset="utf-8" />
 
@@ -12,6 +12,7 @@
         <meta name="locale" content="nl_BE">
         <meta name="keywords" content="HTML,CSS,PHP,Backend,Frontend,Webdeveloper,Laravel,Websites">
         <meta name="author" content="Alessandro Aussems">
+        <meta name="publisher" content="Alessandro Aussems">
 
         <meta property="og:title" content="Alessandro Aussems | Portfolio" />
         <meta property="og:site_name" content="Alessandro Aussems | Portfolio" />
@@ -26,14 +27,17 @@
         <meta property="twitter:image" content="https://alessandroaussems.be/assets/alessandro.jpg" />
         <meta property="twitter:url" content="https://alessandroaussems.be/assets/alessandro.jpg" />
 
+        <meta name="robots" content="all">
+
         <title>Alessandro Aussems | Portfolio</title>
 
+        <link rel=”canonical” href=”https://alessandroaussems.be” />
         <link rel="icon" type="image/png" href="assets/logo.png">
         <link rel="stylesheet" type="text/css" href="css/styling.css">
     </head>
     <body>
         <header>
-            <img src="assets/alessandro.jpg" alt="Een foto van Alessandro Ausssems">
+            <img src="assets/alessandro.jpg" alt="Een foto van Alessandro Ausssems" title="Alessandro Aussems">
             <a href="/" id="h1link"><h1>Alessandro Aussems</h1></a>
             <a href="/" id="h2text"><h2>Developer</h2></a>
             <p id="arrow"></p>
