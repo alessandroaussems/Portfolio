@@ -30,8 +30,8 @@ var projectsdata= [
         title:"Karel-Chatbot",
         exp:"Final year project @ KdG. Chatbot for KdG students!",
         img:"karelchatbot.jpg",
-        git:"none",
-        online:"https://www.youtube.com/embed/P847xWRseTU"
+        git:"https://github.com/alessandroaussems/karel-chatbot",
+        online:"none"
     },
     {
         title:"Restaumator",
@@ -45,7 +45,7 @@ var projectsdata= [
         exp:"A toilet any place, any time. AirBnB for toilets!",
         img:"tinkle.jpg",
         git:"https://github.com/alessandroaussems/Tinkle",
-        online:"https://github.com/alessandroaussems/Tinkle"
+        online:"none"
     },
     {
         title:"Codepolice",
@@ -87,7 +87,7 @@ var projectsdata= [
         exp:"Teaser for a fictional series, Montage by me!",
         img:"thecase.jpg",
         git:"none",
-        online:"https://www.youtube.com/embed/xQ6TH2SYqss"
+        online:"https://alessandroaussems.be/thecase.mp4"
     }
 ];
 var bottomline=document.getElementsByClassName("bottomline")[0];
@@ -213,22 +213,26 @@ function ShowProjects()
     var header=document.createElement("h3");
     var img=document.createElement("img");
     var text=document.createElement("p");
-    if(projectsdata[i].git!="none"){var gitlink=document.createElement("a");}
-    var onlinelink=document.createElement("a");
-    if(projectsdata[i].git!="none"){var gitimg=document.createElement("img");}
-    var onlineimg=document.createElement("img");
-    if(projectsdata[i].git!="none"){gitimg.setAttribute("src","assets/github.png");}
-    onlineimg.setAttribute("src","assets/external.png");
-    if(projectsdata[i].git!="none"){gitimg.setAttribute("alt","Link naar github");}
-    onlineimg.setAttribute("alt","Link naar de online versie");
-    if(projectsdata[i].git!="none"){gitlink.appendChild(gitimg);}
-    onlinelink.appendChild(onlineimg);
-    if(projectsdata[i].git!="none"){gitlink.setAttribute("href",projectsdata[i].git);}
-    onlinelink.setAttribute("href",projectsdata[i].online);
-    if(projectsdata[i].git!="none"){gitlink.setAttribute("target","_blank");}
-    onlinelink.setAttribute("target","_blank");
-    if(projectsdata[i].git!="none"){gitlink.setAttribute("class","gitlink");}
-    onlinelink.setAttribute("class","onlinelink");
+    if(projectsdata[i].git!="none"){
+        var gitlink=document.createElement("a");
+        var gitimg=document.createElement("img");
+        gitimg.setAttribute("src","assets/github.png");
+        gitimg.setAttribute("alt","Link naar github");
+        gitlink.appendChild(gitimg);
+        gitlink.setAttribute("href",projectsdata[i].git);
+        gitlink.setAttribute("target","_blank");
+        gitlink.setAttribute("class","gitlink");
+    }
+    if(projectsdata[i].online!="none"){
+        var onlinelink=document.createElement("a");
+        var onlineimg=document.createElement("img");
+        onlineimg.setAttribute("src","assets/external.png");
+        onlineimg.setAttribute("alt","Link naar de online versie");
+        onlinelink.appendChild(onlineimg);
+        onlinelink.setAttribute("href",projectsdata[i].online);
+        onlinelink.setAttribute("target","_blank");
+        onlinelink.setAttribute("class","onlinelink");
+    }
     img.setAttribute("alt","Afbeelding van "+projectsdata[i].title);
     header.appendChild(document.createTextNode(projectsdata[i].title));
     text.appendChild(document.createTextNode(projectsdata[i].exp));
@@ -236,9 +240,15 @@ function ShowProjects()
     newline.appendChild(header);
     newline.appendChild(img);
     newline.appendChild(text);
-    newline.appendChild(onlinelink);
+    if(projectsdata[i].online=="none" && projectsdata[i].git!="none" ||
+        projectsdata[i].git=="none" && projectsdata[i].online!="none"){
+        newline.setAttribute("class","project clearfix onechild");
+    }
+    else{
+        newline.setAttribute("class","project clearfix");
+    }
+    if(projectsdata[i].online!="none"){newline.appendChild(onlinelink);}
     if(projectsdata[i].git!="none"){newline.appendChild(gitlink);}
-    newline.setAttribute("class","project clearfix");
     lines.appendChild(newline);
     }
 }

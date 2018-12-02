@@ -227,7 +227,9 @@ header  img
 {
     width: 100%;
 }
-
+.onechild  a{
+    margin-left: 46.25%;
+}
 .project > a
 {
     float: left;
