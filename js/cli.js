@@ -52,7 +52,7 @@ var projectsdata= [
         exp:"Find plagiarism code on the internet!",
         img:"codepolice.jpg",
         git:"https://github.com/alessandroaussems/Codepolice",
-        online:"https://alessandroaussems.be/codepolice/"
+        online:"none"
     },
     {
         title:"Blackjack",
@@ -73,21 +73,21 @@ var projectsdata= [
         exp:"Created with pure PHP, no framework!",
         img:"hackernews.jpg",
         git:"https://github.com/alessandroaussems/Hackernews",
-        online:"https://alessandroaussems.be/hackernews/"
+        online:"none"
     },
     {
         title:"HanGit",
         exp:"Javascript game based on the well known Hangman",
         img:"hangit.jpg",
         git:"https://github.com/alessandroaussems/HangIt",
-        online:"https://alessandroaussems.be/hangit/"
+        online:"none"
     },
     {
         title:"The Case: Teaser",
         exp:"Teaser for a fictional series, Montage by me!",
         img:"thecase.jpg",
         git:"none",
-        online:"https://alessandroaussems.be/thecase.mp4"
+        online:"#"
     }
 ];
 var bottomline=document.getElementsByClassName("bottomline")[0];
