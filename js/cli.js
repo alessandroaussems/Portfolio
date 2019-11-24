@@ -27,11 +27,25 @@ var contactdata=[
 ];
 var projectsdata= [
     {
+        title:"Delen Hackathon 2019",
+        exp:"Best UX price with our project: Delen-Connect",
+        img:"delen-connect.jpg",
+        git:"https://github.com/alessandroaussems/delen-connect",
+        online:"https://www.instagram.com/p/Bt6QHyinch5/"
+    },
+    {
         title:"Karel-Chatbot",
         exp:"Final year project @ KdG. Chatbot for KdG students!",
         img:"karelchatbot.jpg",
         git:"https://github.com/alessandroaussems/karel-chatbot",
         online:"none"
+    },
+    {
+        title:"Delen Hackathon 2018",
+        exp:"Second place Delen Hackathon 2018. With our project Tilis",
+        img:"tilis.jpg",
+        git:"none",
+        online:"https://blog.exellys.com/the-hackathon-aftermath/"
     },
     {
         title:"Restaumator",

@@ -208,6 +208,7 @@ header  img
     display: table;
     margin: 0 auto;
     margin-top: 25px;
+    margin-bottom: 10px;
 }
 .project > img
 {
