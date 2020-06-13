@@ -298,7 +298,7 @@ function Contact(timeout,reply)
                 if(i==1)
                 {
                     var maillink=document.createElement("a");
-                    maillink.setAttribute("href","mailto:hello@alessandroaussems.be");
+                    maillink.setAttribute("href","mailto:me@alessandroaussems.be");
                     maillink.appendChild(document.createTextNode(contactdata[i]));
                     pretag.appendChild(maillink);
                 }
