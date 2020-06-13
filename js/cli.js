@@ -22,8 +22,8 @@ var contactdata=[
                 "Reply Email     : me@alessandroaussems.be",
                 "Reply Tel       : +32 (0)471 44 82 10",
                 "Reply Location  : Lier",
-                "Reply Github    : github.com/alessandroaussems",
-                "Reply LinkedIn  : linkedin.com/in/alessandroaussems"
+                "Reply Github    : alssndro.be/github",
+                "Reply LinkedIn  : alssndro.be/linkedin"
 ];
 var projectsdata= [
     {
@@ -312,7 +312,7 @@ function Contact(timeout,reply)
                 if(i==4)
                 {
                     var link=document.createElement("a");
-                    link.setAttribute("href","https://github.com/alessandroaussems");
+                    link.setAttribute("href","https://alssndro.be/github");
                     link.setAttribute("target","_blank");
                     link.appendChild(document.createTextNode(contactdata[i]));
                     pretag.appendChild(link);
@@ -320,7 +320,7 @@ function Contact(timeout,reply)
                 if(i==5)
                 {
                     var link=document.createElement("a");
-                    link.setAttribute("href","https://linkedin.com/in/alessandroaussems");
+                    link.setAttribute("href","https://alssndro.be/linkedin");
                     link.setAttribute("target","_blank");
                     link.appendChild(document.createTextNode(contactdata[i]));
                     pretag.appendChild(link);
