@@ -1,3 +1,8 @@
+var hobbiesdata=[
+                "[Running]",
+                "[Cycling]",
+                "[Fitness]",
+            ];
 var skillsdata=[
                 "[HTML]",
                 "[CSS]",
@@ -125,6 +130,7 @@ function WidthChange(mq)
         CreateIntro("Hi welcome to my portfolio!");
         CheckCommand("skills","mobile");
         CheckCommand("projects","mobile");
+        CheckCommand("hobbies","mobile");
         CheckCommand("contact","mobile");
     }
 }
@@ -154,6 +160,11 @@ function CheckCommand(value,event)
             break;
             case "skills":
                 ShowSkills();
+                CreateNewBottomLine();
+                bottomline.scrollIntoView(true);
+            break;
+            case "hobbies":
+                ShowHobbies();
                 CreateNewBottomLine();
                 bottomline.scrollIntoView(true);
             break;
@@ -274,6 +285,20 @@ function ShowSkills()
         var span=document.createElement("span");
         span.appendChild(document.createTextNode(skillsdata[i]));
         span.setAttribute("class","skill");
+        line.appendChild(span);
+        var wbr=document.createElement("wbr");
+        line.appendChild(wbr);
+    }
+    lines.appendChild(line);
+}
+function ShowHobbies()
+{
+    var line=document.createElement('li');
+    for(var i=0;i<hobbiesdata.length;i++)
+    {
+        var span=document.createElement("span");
+        span.appendChild(document.createTextNode(hobbiesdata[i]));
+        span.setAttribute("class","hobby");
         line.appendChild(span);
         var wbr=document.createElement("wbr");
         line.appendChild(wbr);
