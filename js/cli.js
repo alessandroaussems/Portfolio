@@ -21,6 +21,9 @@ var skillsdata=[
                 "[Vue]",
                 "[Wordpress]",
                 "[Drupal]",
+                "[Apache]",
+                "[MySQL]",
+                "[GIT]"
             ];
 var contactdata=[
                 "Pinging alessandroaussems.be",
