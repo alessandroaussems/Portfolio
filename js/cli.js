@@ -32,6 +32,7 @@ var contactdata=[
                 "Reply Location  : Lier",
                 "Reply Github    : alssndro.be/github",
                 "Reply LinkedIn  : alssndro.be/linkedin"
+                "Reply Twitter   : alssndro.be/twitter
 ];
 var projectsdata= [
     {
@@ -353,7 +354,15 @@ function Contact(timeout,reply)
                     link.appendChild(document.createTextNode(contactdata[i]));
                     pretag.appendChild(link);
                 }
-                if(i!=1 && i!=2 && i!=4 && i!=5)
+                if(i==6)
+                {
+                    var link=document.createElement("a");
+                    link.setAttribute("href","https://alssndro.be/twitter");
+                    link.setAttribute("target","_blank");
+                    link.appendChild(document.createTextNode(contactdata[i]));
+                    pretag.appendChild(link);
+                }
+                if(i!=1 && i!=2 && i!=4 && i!=5 && i!=6)
                 {
                     if(timeout==0 && i==0)
                     {
