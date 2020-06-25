@@ -31,8 +31,8 @@ var contactdata=[
                 "Reply Tel       : +32 (0)471 44 82 10",
                 "Reply Location  : Lier",
                 "Reply Github    : alssndro.be/github",
-                "Reply LinkedIn  : alssndro.be/linkedin"
-                "Reply Twitter   : alssndro.be/twitter
+                "Reply LinkedIn  : alssndro.be/linkedin",
+                "Reply Twitter   : alssndro.be/twitter"
 ];
 var projectsdata= [
     {
