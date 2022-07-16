@@ -31,8 +31,7 @@ var contactdata=[
                 "Reply Tel       : +32 (0)471 44 82 10",
                 "Reply Location  : Lier",
                 "Reply Github    : alssndro.be/github",
-                "Reply LinkedIn  : alssndro.be/linkedin",
-                "Reply Twitter   : alssndro.be/twitter"
+                "Reply LinkedIn  : alssndro.be/linkedin"
 ];
 var projectsdata= [
     {
@@ -354,15 +353,7 @@ function Contact(timeout,reply)
                     link.appendChild(document.createTextNode(contactdata[i]));
                     pretag.appendChild(link);
                 }
-                if(i==6)
-                {
-                    var link=document.createElement("a");
-                    link.setAttribute("href","https://alssndro.be/twitter");
-                    link.setAttribute("target","_blank");
-                    link.appendChild(document.createTextNode(contactdata[i]));
-                    pretag.appendChild(link);
-                }
-                if(i!=1 && i!=2 && i!=4 && i!=5 && i!=6)
+                if(i!=1 && i!=2 && i!=4 && i!=5)
                 {
                     if(timeout==0 && i==0)
                     {
